@@ -1,6 +1,6 @@
 ---
 name: test-driven-development
-description: Use when implementing any feature or bugfix, before writing implementation code
+description: Use when implementing durable code changes with a meaningful automated test surface, especially features or bugfixes where behavior needs to be locked in before editing production code
 ---
 
 # Test-Driven Development (TDD)
@@ -15,28 +15,30 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 ## When to Use
 
-**Always:**
+**Strong default:**
 - New features
 - Bug fixes
 - Refactoring
 - Behavior changes
 
-**Exceptions (ask your human partner):**
+**Common exceptions:**
 - Throwaway prototypes
 - Generated code
 - Configuration files
+- Documentation or prompt-only edits
+- Workflow or skill documentation changes with no executable behavior
 
-Thinking "skip TDD just this once"? Stop. That's rationalization.
+If the change should be protected by automated tests and the test surface exists, default to TDD. If local instructions explicitly optimize for fast prototype feedback, follow them.
 
 ## The Iron Law
 
 ```
-NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
+WHEN USING THIS SKILL: NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
 ```
 
 Write code before the test? Delete it. Start over.
 
-**No exceptions:**
+**No exceptions once you're in this workflow:**
 - Don't keep it as "reference"
 - Don't "adapt" it while writing tests
 - Don't look at it

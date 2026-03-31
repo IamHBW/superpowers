@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+description: Use when a bug, test failure, or unexpected behavior does not already have an obvious low-risk fix, especially when the root cause is unclear, the issue spans components, or previous fixes have failed
 ---
 
 # Systematic Debugging
@@ -23,7 +23,7 @@ If you haven't completed Phase 1, you cannot propose fixes.
 
 ## When to Use
 
-Use for ANY technical issue:
+Use for technical issues where root cause is not yet established:
 - Test failures
 - Bugs in production
 - Unexpected behavior
@@ -38,10 +38,13 @@ Use for ANY technical issue:
 - Previous fix didn't work
 - You don't fully understand the issue
 
-**Don't skip when:**
-- Issue seems simple (simple bugs have root causes too)
-- You're in a hurry (rushing guarantees rework)
-- Manager wants it fixed NOW (systematic is faster than thrashing)
+**You can stay lighter-weight when all of these are true:**
+- The failure is local and trivial
+- The cause is already obvious from the error and nearby code
+- The fix is low-risk and easy to verify
+- No prior failed fixes suggest hidden coupling
+
+If those conditions are not true, use the full process.
 
 ## The Four Phases
 

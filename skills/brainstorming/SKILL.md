@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+description: "Use when planning substantial new features, multi-module behavior changes, or ambiguous implementation work where requirements and design need to be clarified before coding."
 ---
 
 # Brainstorming Ideas Into Designs
@@ -10,12 +10,18 @@ Help turn ideas into fully formed designs and specs through natural collaborativ
 Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
 
 <HARD-GATE>
-Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.
+When this skill is in use, do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it.
 </HARD-GATE>
 
-## Anti-Pattern: "This Is Too Simple To Need A Design"
+## Scope
 
-Every project goes through this process. A todo list, a single-function utility, a config change — all of them. "Simple" projects are where unexamined assumptions cause the most wasted work. The design can be short (a few sentences for truly simple projects), but you MUST present it and get approval.
+Use this skill for work that is genuinely design-shaped:
+- Substantial new features
+- Multi-file or multi-module behavior changes
+- User-facing flows with meaningful trade-offs
+- Requests where requirements, boundaries, or success criteria are still ambiguous
+
+Do not force this workflow onto trivial, low-risk edits such as narrow bug fixes, obvious refactors, simple config changes, or other tasks where local instructions explicitly prefer direct execution.
 
 ## Checklist
 
@@ -63,7 +69,7 @@ digraph brainstorming {
 }
 ```
 
-**The terminal state is invoking writing-plans.** Do NOT invoke frontend-design, mcp-builder, or any other implementation skill. The ONLY skill you invoke after brainstorming is writing-plans.
+**The terminal state is invoking writing-plans.** For tasks that entered this skill, do NOT invoke frontend-design, mcp-builder, or any other implementation skill before writing-plans.
 
 ## The Process
 
